@@ -2,9 +2,7 @@
 
 import vcf
 import numpy as np
-import vcf
 import os
-import subprocess
 __author__ = 'Frank Ruge'
 
 
@@ -71,10 +69,10 @@ class Assignment2:
         
     
     def print_summary(self):
-        avg_PHRED = assignment1.get_average_quality_of_son(); print(avg_PHRED)
-        number_var = assignment1.get_total_number_of_variants_of_son(); print(number_var)
+        avg_PHRED = assignment1.get_average_quality_of_son(); print("Average PHRED: "+ str(avg_PHRED))
+        number_var = assignment1.get_total_number_of_variants_of_son(); print("total_number_of_variants_of_son: " + str(number_var))
         variant_caller = assignment1.get_variant_caller_of_vcf(); print("Variant Caller: "+variant_caller)
-        reference_version = assignment1.get_human_reference_version(); print("Reference used:"+reference_version)
+        reference_version = assignment1.get_human_reference_version(); print("Reference used: "+reference_version)
         number_indels=assignment1.get_number_of_indels(); print("Number of Indels: "+str(number_indels))
         snv=assignment1.get_number_of_snvs();print("SNPs including SNVs: "+str(snv))
         heterozygous_variants = assignment1.get_number_of_heterozygous_variants();print("Heterozygous variants: "+str(heterozygous_variants))
